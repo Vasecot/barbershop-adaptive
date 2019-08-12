@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Барбершоп «Бородинский»</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item"><a href="photo.html">Наши работы</a></li>
+          <li class="site-list__item site-list__item--active"><a>Записаться</a></li>
+          <li class="site-list__item"><a href="#">Контакты</a></li>
+          <li class="site-list__item"><a href="#">HTML Academy</a></li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item"><a class="user-list__login" href="login.html">Войти</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-form">
+    <section class="haircut">
+      <div class="haircut__wrapper">
+        <h2 class="haircut__title">Запись на стрижку</h2>
+        <form class="haircut__record" action="https://echo.htmlacademy.ru" method="post">
+          <div class="haircut__record--initials">
+            <p class="haircut__record--item">
+              <label for="haircut__record--surname" class="visually-hidden">Введите вашу фамилию</label>
+              <input type="text" name="surname" id="haircut__record--surname" placeholder="Фамилия">
+            </p>
+            <p class="haircut__record--item">
+              <label class="visually-hidden" for="haircut__record--name">Введите ваше имя</label>
+              <input type="text" name="name" id="haircut__record--name" placeholder="Имя">
+            </p>
+            <p class="haircut__record--item">
+              <label for="haircut__record--patronymic" class="visually-hidden">Введите ваше отчество</label>
+              <input type="text" name="patronymic" id="haircut__record--patronymic" placeholder="Отчество">
+            </p>
+          </div>
+          <div class="haircut__record--contacts">
+            <p class="haircut__record--item">
+              <label for="haircut__record--telefon" class="visually-hidden">Введите контактный телефон</label>
+              <input type="tel" name="telefon" id="haircut__record--telefon" placeholder="Контактный телефон">
+            </p>
+            <p class="haircut__record--item">
+              <label for="haircut__record--email" class="visually-hidden">Введите e-mail</label>
+              <input type="email" name="email" id="haircut__record--email" placeholder="Контактный e-mail">
+            </p>
+          </div>
+          <div class="haircut__record--note">
+              <label for="haircut__record--note"></label>
+              <textarea name="note" rows="8" cols="80" id="haircut__record--note" placeholder="Доп. информация для мастера"></textarea>
+          </div>
+
+          <div class="haircut__model">
+            <b class="haircut__model--title">Выберите модель бороды:</b>
+          </div>
+        </form>
+        <a href="index.html" class="haircut__to-index button">На главную</a>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
