@@ -29,48 +29,143 @@
   </header>
 
   <main class="page-form">
+
     <section class="haircut">
       <div class="haircut__wrapper">
-        <h2 class="haircut__title">Запись на стрижку</h2>
-        <form class="haircut__record" action="https://echo.htmlacademy.ru" method="post">
-          <div class="haircut__record--initials">
-            <p class="haircut__record--item">
-              <label for="haircut__record--surname" class="visually-hidden">Введите вашу фамилию</label>
-              <input type="text" name="surname" id="haircut__record--surname" placeholder="Фамилия">
-            </p>
-            <p class="haircut__record--item">
-              <label class="visually-hidden" for="haircut__record--name">Введите ваше имя</label>
-              <input type="text" name="name" id="haircut__record--name" placeholder="Имя">
-            </p>
-            <p class="haircut__record--item">
-              <label for="haircut__record--patronymic" class="visually-hidden">Введите ваше отчество</label>
-              <input type="text" name="patronymic" id="haircut__record--patronymic" placeholder="Отчество">
-            </p>
-          </div>
-          <div class="haircut__record--contacts">
-            <p class="haircut__record--item">
-              <label for="haircut__record--telefon" class="visually-hidden">Введите контактный телефон</label>
-              <input type="tel" name="telefon" id="haircut__record--telefon" placeholder="Контактный телефон">
-            </p>
-            <p class="haircut__record--item">
-              <label for="haircut__record--email" class="visually-hidden">Введите e-mail</label>
-              <input type="email" name="email" id="haircut__record--email" placeholder="Контактный e-mail">
-            </p>
-          </div>
-          <div class="haircut__record--note">
-              <label for="haircut__record--note"></label>
-              <textarea name="note" rows="8" cols="80" id="haircut__record--note" placeholder="Доп. информация для мастера"></textarea>
-          </div>
-
-          <div class="haircut__model">
-            <b class="haircut__model--title">Выберите модель бороды:</b>
-          </div>
-        </form>
         <a href="index.html" class="haircut__to-index button">На главную</a>
+        <h2 class="haircut__title">Записаться на стрижку</h2>
+
+        <form class="haircut__record" action="https://echo.htmlacademy.ru" method="post">
+
+          <fieldset class="haircut__contacts">
+            <legend class="visually-hidden">Инициалы клиента:</legend>
+            <ul class="haircut__contacts--list">
+              <li class="haircut__contacts--item">
+                <label for="surname">Введите фамилию</label>
+                <input type="text" name="surname" placeholder="Фамилия" id="surname">
+              </li>
+              <li class="haircut__contacts--item">
+                <label for="name">Введите имя</label>
+                <input type="text" name="name" placeholder="Имя" id="name">
+              </li>
+              <li class="haircut__contacts--item">
+                <label for="surname">Введите отчество</label>
+                <input type="text" name="patronymic" placeholder="Отчество" id="patronymic">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="haircut__contacts">
+            <legend class="visually-hidden">Контактные данные клиента</legend>
+            <ul class="haircut__contacts--list">
+              <li class="haircut__contacts--item">
+                <label for="telefon">Введите телефон</label>
+                <input type="tel" name="telefon" placeholder="Контактный телефон" id="telefon">
+              </li>
+              <li class="haircut__contacts--item">
+                <label for="mail">Введите e-mail</label>
+                <input type="email" name="mail" placeholder="Контактный e-mail" id="mail">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="haircut__info">
+            <legend>Напиши дополнительную информацию</legend>
+            <textarea name="note" rows="8" cols="80" placeholder="Доп. информация для мастера"></textarea>
+          </fieldset>
+
+          <fieldset class="haircut__model">
+            <legend>Выберите модель бороды</legend>
+            <ul class="haircut__model--list">
+              <li class="haircut__model--item">
+                <input type="radio" name="beard" value="admiral" id="beard-admiral" checked>
+                <label for="beard-admiral">Адмирал</label>
+              </li>
+              <li class="haircut__model--item">
+                <input type="radio" name="beard" value="lumberjack" id="beard-lumberjack">
+                <label for="beard-lumberjack">Лесоруб</label>
+              </li>
+              <li class="haircut__model--item">
+                <input type="radio" name="beard" value="polar-explorer" id="beard-polar-explorer">
+                <label for="beard-polar-explorer">Полярник</label>
+              </li>
+              <li class="haircut__model--item">
+                <input type="radio" name="beard" value="boyar" id="beard-boyar">
+                <label for="beard-boyar">Боярин</label>
+              </li>
+              <li class="haircut__model--item">
+                <input type="radio" name="beard" value="sage" id="beard-sage">
+                <label for="beard-sage">Мудрец</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="haircut__service">
+            <legend>Дополнительные услуги:</legend>
+            <ul class="haircut__service--list">
+              <li class="haircut__service-item">
+                <input type="checkbox" name="tint-beard" id="tint-beard" checked>
+                <label for="tint-beard">Подкрасить бороду</label>
+              </li>
+              <li class="haircut__service--item">
+                <input type="checkbox" name="wind-the-mustache" id="wind-mustache">
+                <label for="wind-mustache">Накрутить усы</label>
+              </li>
+              <li class="haircut__service--item">
+                <input type="checkbox" name="comb-the-beard" id="comb-beard">
+                <label for="comb-beard">Причесать бороду</label>
+              </li>
+              <li class="haircut__service--item">
+                <input type="checkbox" name="trim-whiskey" id="trim-whiskey">
+                <label for="trim-whiskey">Подровнять виски</label>
+              </li>
+              <li class="haircut__service--item">
+                <input type="checkbox" name="remove-gray-hair" id="remove-grayhair">
+                <label for="remove-grayhair">Убрать седину</label>
+              </li>
+              <li class="haircut__service--item">
+                <input type="checkbox" name="polish-bald-head" id="polish-baldhead">
+                <label for="polish-baldhead">Отполировать лысину</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Отправить заявку</button>
+        </form>
       </div>
     </section>
+
   </main>
 
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__contacts contacts"><b class="contacts__title">Барбершоп Бородинский</b>
+        <p class="contacts__text">
+          г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
+          <a class="contacts__phone href=" +78125556666""><span class="contacts__phone-mobile">Тел.:</span class="contacts__phone-mobile">+7 (812) 555-66-66</a>
+        </p>
+      </div>
+      <div class="page-footer__social social">
+        <b class="social__title">Давайте дружить!</b>
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="https://vk.com/htmlacademy" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a href="https://facebook.com/htmlacademy" class="social__link social__link--facebook">Мы в Facebook</a>
+          </li>
+          <li class="social__item">
+            <a href="https://instagram.com/htmlacademy" class="social__link social__link--instagram">Мы в Instagram</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">
+          Разработано:
+        </b>
+        <a href="https://htmlacademy.ru" class="button copyright__link">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
