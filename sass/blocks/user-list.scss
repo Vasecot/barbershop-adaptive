@@ -5,15 +5,19 @@
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
-}
 
-.user-list__login-icon {
-  position: absolute;
-  top: 17px;
-  left: 21px;
-  width: 16px;
-  height: 16px;
-  opacity: 0.3;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 21px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/login.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+  }
 }
 @media (min-width: $tablet-width) {
   .user-list {
@@ -26,18 +30,15 @@
     padding: 0;
     font-size: 0;
 
-    &:hover .user-list__login-icon {
-      opacity: 1;
+    &:hover::before {
+      background-image: url("../img/login-desktop-hover.png");
+      top: 29px;
+      left: 12px;
     }
 
-    &:active .user-list__login-icon {
-      opacity: 0.3;
+    &:active::before {
+      background-image: url("../img/login-desktop-down.png");
     }
-  }
-
-  .user-list__login-icon {
-    top: 29px;
-    left: 12px;
   }
 }
 @media (min-width: $desktop-width) {
@@ -67,16 +68,21 @@
       background-color: #ffffff;
     }
 
-    &:hover .user-list__login-icon {
+    &::before {
+      background-image: url("../img/login.png");
+      top: 27px;
+      left: 23px;
       opacity: 0.3;
     }
-  }
 
-  &:active .user-list__login-icon {
-    opacity: 0.1;
-  }
-}
+    &:hover::before {
+      background-image: url("../img/login-desktop-hover.png");
+      top: 27px;
+      left: 23px;
+    }
 
-.user-list__login-icon {
-  left: 15px;
+    &:active::before {
+      background-image: url("../img/login-desktop-down.png");
+    }
+  }
 }

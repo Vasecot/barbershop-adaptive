@@ -1,6 +1,5 @@
 .stats {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
 }
 
 .stats__header {
@@ -97,7 +96,9 @@
 }
 @media (min-width:$tablet-width) {
   .stats {
-    width: 640px;
+    width: 84%;
+    width: 960px;
+    margin: 0 auto;
     margin-top: -185px;
   }
 
@@ -119,8 +120,8 @@
   }
 
   .stats__slogan {
-    width: 240px;
-    margin-bottom: 16px;
+    width: 50%;
+    margin-bottom: 18px;
     font-size: 40px;
     line-height: 40px;
     text-align: left;
@@ -128,15 +129,16 @@
   }
 
   .stats__intro {
-    width: 210px;
+    width: 37.5%;
     margin-top: 5px;
-    padding-right: 47px;
+    padding: 0;
+    padding-left: 30px;
     text-align: left;
   }
 
   .stats__legend--top {
     display: block;
-    width: 240px;
+    width: 50%;
     color: rgba(0, 0, 0, 0.3);
   }
 
@@ -150,8 +152,10 @@
   }
 
   .stats__list tr {
-    width: 250px;
-    padding: 25px 35px 28px;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 25px 35px;
+    padding-bottom: 28px;
   }
 
   .stats__list td {
@@ -184,7 +188,7 @@
   }
 
   .stats__header {
-    display: block;
+    flex-direction: column;
     width: 240px;
 
     &::before {
@@ -201,14 +205,17 @@
     width: auto;
     margin-bottom: 32px;
     padding-right: 30px;
+    padding-left: 0;
   }
 
   .stats__legend--top {
     width: auto;
+    margin-top: auto;
   }
 
   .stats__list {
     display: flex;
     width: 640px;
+    flex-grow: 1;
   }
 }

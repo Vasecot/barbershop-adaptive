@@ -28,7 +28,6 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item"><a class="user-list__login" href="login.html">
-              <img class="user-list__login-icon" src="svg/login.svg" width="16" height="16" alt="Войти">
               Войти</a></li>
         </ul>
       </div>
@@ -89,14 +88,17 @@
         <ul class="advantages-list slider__list">
           <li class="advantages__item advantages__item--fast slider__item">
             <h3 class="advantages__title">Быстро</h3>
+            <img src="img/advantage-1-illustration.png" width="95" height="94" alt="Быстро">
             <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
           </li>
           <li class="advantages__item advantages__item--cool slider__item">
             <h3 class="advantages__title">Круто</h3>
+            <img src="img/advantage-2-illustration.png" width="95" height="88" alt="Круто">
             <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино.
               Во всяком случае внешне.</p>
           </li>
           <li class="advantages__item advantages__item--price slider__item">
+            <img src="img/advantage-3-illustration.png" width="95" height="91" alt="Дорого">
             <h3 class="advantages__title">Дорого</h3>
             <p class="advantages__description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
           </li>
@@ -233,7 +235,7 @@
     navToggle.addEventListener('click', function() {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
-        navMain.claclassList.add('main-nav--opened');
+        navMain.classList.add('main-nav--opened');
       } else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
