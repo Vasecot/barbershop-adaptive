@@ -14,7 +14,8 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="svg/logotype-mobile.svg" width="230" height="30" alt="Барбершоп «Бородинский»">
+      <img class="page-header__logo-image" src="svg/logotype-mobile.svg" width="230" height="30"
+        alt="Барбершоп «Бородинский»">
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -85,30 +86,35 @@
     <section class="advantages">
       <div class="advantages__wrapper slider">
         <h2 class="visually-hidden">Наши преимущества</h2>
+        <input class="slider__toggle--radio" type="radio" id="advantages-input-1" name="advantages" checked>
+        <input class="slider__toggle--radio" type="radio" id="advantages-input-2" name="advantages">
+        <input class="slider__toggle--radio" type="radio" id="advantages-input-3" name="advantages">
         <ul class="advantages-list slider__list">
           <li class="advantages__item advantages__item--fast slider__item">
-            <h3 class="advantages__title">Быстро</h3>
             <img src="img/advantage-1-illustration.png" width="95" height="94" alt="Быстро">
-            <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+            <h3 class="advantages__title">Быстро</h3>
+            <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы —
+              счастливый обладатель стильной стрижки-минутки</p>
           </li>
           <li class="advantages__item advantages__item--cool slider__item">
-            <h3 class="advantages__title">Круто</h3>
             <img src="img/advantage-2-illustration.png" width="95" height="88" alt="Круто">
-            <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино.
+            <h3 class="advantages__title">Круто</h3>
+            <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или
+              кино.
               Во всяком случае внешне.</p>
           </li>
           <li class="advantages__item advantages__item--price slider__item">
             <img src="img/advantage-3-illustration.png" width="95" height="91" alt="Дорого">
             <h3 class="advantages__title">Дорого</h3>
-            <p class="advantages__description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+            <p class="advantages__description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому
+              же, разве цена не даёт определённый статус?</p>
           </li>
         </ul>
-        <p class="advantages__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
-      </div>
+        <div class="advantages__toggles slider__toggles">
+          <label class="slider__toggle" for="advantages-input-1">1</label>
+          <label class="slider__toggle" for="advantages-input-2">2</label>
+          <label class="slider__toggle" for="advantages-input-3">3</label>
+        </div>
     </section>
 
     <section class="news">
@@ -151,7 +157,8 @@
         <div class="review__list slider__list">
           <blockquote class="reviews__item slider__item">
             <p class="review__author-picture">
-              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса Баркера" class="reviews__author-image">
+              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса Баркера"
+                class="reviews__author-image">
             </p>
             <cite class="reviews__author-name">
               Трэвис Баркер
@@ -163,7 +170,8 @@
           </blockquote>
           <blockquote class="reviews__item slider__item">
             <p class="review__author-picture">
-              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Джона Смита" class="reviews__author-image">
+              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Джона Смита"
+                class="reviews__author-image">
             </p>
             <cite class="reviews__author-name">
               Джон Смит
@@ -174,7 +182,8 @@
           </blockquote>
           <blockquote class="reviews__item slider__item">
             <p class="review__author-picture">
-              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Ивана Бородайло" class="reviews__author-image">
+              <img src="img/picture-travis.jpg" width="50" height="33" alt="Фото Ивана Бородайло"
+                class="reviews__author-image">
             </p>
             <cite class="reviews__author-name">
               Иван Бородайло
@@ -200,7 +209,8 @@
       <div class="page-footer__contacts contacts"><b class="contacts__title">Барбершоп Бородинский</b>
         <p class="contacts__text">
           г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-          <a class="contacts__phone href=" +78125556666""><span class="contacts__phone-mobile">Тел.:</span class="contacts__phone-mobile">+7 (812) 555-66-66</a>
+          <a class="contacts__phone href=" +78125556666""><span class="contacts__phone-mobile">Тел.:</span
+              class="contacts__phone-mobile">+7 (812) 555-66-66</a>
         </p>
       </div>
       <div class="page-footer__social social">
@@ -232,7 +242,7 @@
 
     navMain.classList.remove('main-nav--nojs');
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function () {
       if (navMain.classList.contains('main-nav--closed')) {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');

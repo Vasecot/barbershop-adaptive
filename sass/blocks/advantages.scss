@@ -1,18 +1,85 @@
+/* TODO Разработка блока преимуществ */
 .advantages__wrapper {
-  outline: 1px solid red;//временно для разметки
+  position: relative;
   width: auto;
   text-align: center;
 }
+
 .advantages-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .advantages__item {
-  outline: 1px solid red;//временно для разметки
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.advantages__title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .advantages__description {
-  width: 230px;
+  padding-left: 40px;
+  padding-right: 40px;
   text-align: center;
+}
+
+@media (max-width: $mobile-width-only) {
+  .slider__item:nth-child(n) {
+    display: none;
+  }
+
+  .advantages__toggles {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 76px;
+    height: 10px;
+    transform: translateX(-50%);
+  }
+
+  #advantages-input-1:checked~.advantages__toggles label[for="advantages-input-1"],
+  #advantages-input-2:checked~.advantages__toggles label[for="advantages-input-2"],
+  #advantages-input-3:checked~.advantages__toggles label[for="advantages-input-3"] {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  #advantages-input-1:checked~.advantages-list .advantages__item--fast,
+  #advantages-input-2:checked~.advantages-list .advantages__item--cool,
+  #advantages-input-3:checked~.advantages-list .advantages__item--price {
+    display: block;
+  }
+
+  .slider__toggle--radio {
+    display: none;
+  }
+
+  .slider__toggles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slider__toggle {
+    font-size: 0;
+    width: 7px;
+    height: 7px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid black;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+  }
 }

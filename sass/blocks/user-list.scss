@@ -30,6 +30,13 @@
     padding: 0;
     font-size: 0;
 
+    &::before {
+      background-image: url("../img/login.png");
+      top: 27px;
+      left: 23px;
+      opacity: 0.3;
+    }
+
     &:hover::before {
       background-image: url("../img/login-desktop-hover.png");
       top: 29px;
