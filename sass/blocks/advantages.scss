@@ -1,8 +1,26 @@
 /* TODO Разработка блока преимуществ */
+.advantages {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -58px;
+    left: 0;
+    height: 35px;
+    background-image: url("../svg/corner-dark.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0.5px;
+    transform: rotate(180deg);
+  }
+}
+
 .advantages__wrapper {
   position: relative;
   width: auto;
   text-align: center;
+  padding-top: 30px;
 }
 
 .advantages-list {
@@ -13,21 +31,23 @@
 
 .advantages__item {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .advantages__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
 .advantages__description {
-  padding-left: 40px;
-  padding-right: 40px;
+  margin: 0;
   text-align: center;
 }
 
@@ -38,7 +58,7 @@
 
   .advantages__toggles {
     position: absolute;
-    bottom: -20px;
+    bottom: -25px;
     left: 50%;
     z-index: 5;
     display: flex;
